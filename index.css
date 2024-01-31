@@ -1,4 +1,4 @@
-@import url(./normalize.css);
+/* import font  */
 
 /* Light Font */
 @font-face {
@@ -24,6 +24,21 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url('./assets/fonts/Playfair_Display/PlayfairDisplay-Bold.ttf')
+    format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+/* reset css */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background-color: #fff;
   width: 100%;
@@ -31,6 +46,14 @@ body {
   box-sizing: border-box;
   font-size: 18px;
   font-family: 'Mukta', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'PlayfairDisplay';
+  color: #000;
+  font-weight: 600;
 }
 
 a {
@@ -43,10 +66,28 @@ img {
   height: auto;
 }
 
+.btn {
+  padding: 10px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+}
+
 /* header session */
 .header {
   background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  left: 0;
+  width: 100%;
 }
 
 .header .nav {
@@ -113,4 +154,34 @@ img {
 .header .nav .nav__item--search {
   width: 25px;
   height: 25px;
+}
+
+/* hero section  */
+.hero-section {
+  display: flex;
+  height: 700px;
+  background: url('./assets/images/background-image.png') no-repeat center;
+  background-size: cover;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 10%;
+}
+
+.hero-section .hero-section__title {
+  font-size: 55px;
+  margin: 10px 0;
+  margin-top: 25px;
+}
+
+.hero-section .hero-section__desc {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 10px 0;
+  margin-bottom: 20px;
+}
+
+.hero-section .btn {
+  width: 120px;
+  text-align: center;
+  background-color: #e5b702;
 }
